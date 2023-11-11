@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+    <style>
+
+/* discendent selector */
+        .content1 p{
+            font-size: 50px;
+        }
+ /* child selector (>) it select direct child  */
+        .content1 > ul > li{
+            color: red;
+        }
+
+/* + immedeitely next sibling */
+        .content1 ul p + li{
+            color: orange
+        }     
+        
+/* // select all next sibling take all together any sibling not immedeitely next*/
+        .content1 ul p ~ li{
+            color: purple
+        } 
+
+    </style>
+</head>
+<body>
+    <div class="content1">
+        <ul>
+            <p>I am First</p>
+            <li>inside</li>
+            <li>
+                inside
+                <ol>
+                    <li>nested</li>
+                    <ul>
+                        <li>deep nested</li>
+                    </ul>
+                    <li>nested</li>
+                </ol>
+            </li>
+            <li>inside</li>
+            <p>I am last</p>
+            <li>last child</li>
+        </ul>
+        <li>outside</li>
+    </div>
+</body>
+</html>

@@ -100,6 +100,45 @@ do{
 console.log('value of i is ',m)
 
 
+function shufflePassword(array){
+    for (let i = array.length - 1; i>0; i--){
+        console.log(array[i])
+        const j = Math.floor(Math.random() * (i+1))
+        const temp  = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    let str = ''
+    array.forEach((el) => {
+        str += el
+    })
+    return str
+}
+
+
+// console.log(shufflePassword([1,2,3,4,5,6]))
+
+
+nation = ['ind','aus','nz','eng','ban','sr']
+
+for(let i = nation.length - 1; i>=0; i--){
+    const j = Math.floor(Math.random() * (i+1))
+    // console.log(nation[value])
+    const temp = nation[i]
+    nation[i] = nation[j]
+    nation[j] = temp
+    console.log(nation[j])
+}
+
+
+// console.log(Math.floor(Math.random() * 5))
+
+// let str = ' '
+// nation.forEach((ele) => {
+//     str += ele
+// })
+// console.log(str)
+
 
 
 

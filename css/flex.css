@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+.container{
+    width: 1200px;
+    height: 800px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    align-content: center;
+    background-image: url('pexels-daniel-putzer-633472.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* align-self: center; */
+    /* background-color: red; */
+    
+}
+
+.item{
+    width: 23%;
+    height: 23%;
+    background-color: white;
+    opacity: 40%;
+    border: 2px solid black;
+    text-align: center;
+    text-transform: capitalize;
+    transition: all 0.5s;
+    padding: 1rem 2rem;
+    font-weight: bold;
+}
+
+.item:hover{
+    transform: scale(1.03);
+    box-shadow: 2px 2px 20px olive;
+}
+
+.item1{
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* align-self: flex-start; */
+}
+
+.item2{
+    /* flex-grow: 2; */
+    /* flex-shrink: 1; */
+    /* align-self: center; */
+}
+
+.item3{
+    /* flex-grow: 3; */
+    /* flex-shrink: 3; */
+    /* align-self: center; */
+}
+
+.item4{
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* align-self: self-end; */
+}

@@ -119,8 +119,8 @@
 //     alert("Form submitted!");
 // });
 
-// const sectionTodo = document.querySelector(".todo-section");
-// console.log(sectionTodo.classList);
+const sectionTodo = document.querySelector(".todo-section");
+console.log(sectionTodo.classList);
 // sectionTodo.classList.add('bg-dark');
 // sectionTodo.classList.remove("container")
 // const ans = sectionTodo.classList.contains("container")
@@ -238,7 +238,7 @@
 // 1) in html you add onclick() event 
 // 2) in js file you select button id 
 
-const btn = document.querySelector('.btn-headline');
+// const btn = document.querySelector('.btn-headline');
 // console.log(btn);
 // console.dir(btn);
 // console.log(typeof btn)
@@ -268,6 +268,71 @@ const btn = document.querySelector('.btn-headline');
 //     console.log("value of this")
 //     console.log(this)
 // })
+
+
+// keypress event
+// mouseover event
+
+// const body = document.body;
+
+// body.addEventListener('keypress',(e) => {
+//     console.log(e.key);
+// })
+
+// const mainButton = document.querySelector('.btn-headline');
+// console.log(mainButton)
+
+// mainButton.addEventListener("mouseover",(e) => {
+//     console.log(e.target.textContent)
+//     // console.log("mouseover event occured")
+// })
+
+// mainButton.addEventListener("mouseleave",() => {
+//     console.log("mouseleave event occured")
+// })
+
+
+const todoForm = document.querySelector(".form-todo");
+const todoInput = document.querySelector(".form-todo input[type='text']")
+const todoList = document.querySelector(".todo-list")
+
+console.log(todoInput)
+todoForm.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    console.log('submit event')
+    console.log(todoInput.value)
+    const newTodoText = todoInput.value
+    // todoInput.value = ""
+    const newLi = document.createElement("li")
+    const newLiInnerHtml = `
+    <span class='text'>${newTodoText}</span>
+    <div class='todo-buttons'>
+      <button class='todo-btn done'>Done</button>
+      <button class='todo-btn remove'>Remove</button>
+    </div>`
+    newLi.innerHTML = newLiInnerHtml;
+    todoList.append(newLi)
+    
+})
+
+
+todoList.addEventListener("click",(e) => {
+    // check if user clicked on done button
+    if(e.target.classList.contains('remove')){
+        // console.log("you want to remove something ?")
+        const targetedLi = e.target.parentNode.parentNode;
+        targetedLi.remove();
+        
+    }
+    if(e.target.classList.contains('done')){
+        // console.log("great !!!!!!")
+        const liSpan = e.target.parentNode.previousElementSibling;
+        liSpan.style.textDecoration = 'line-through'
+    }
+})
+
+
+
 
 
 

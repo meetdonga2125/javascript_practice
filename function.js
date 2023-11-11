@@ -408,7 +408,56 @@ console.log(hello.prototype)
 
 // __proto__, [[prototype]] is one type of reference
 // prototype is diffrent form __proto__, and [[prototype]]
-// prototype is one type of object we can store function properties
+// prototype is one type of object we can store functions properties
+
+
+
+const myapp = function(){
+    console.log('hello word')
+}
+
+const myapp1 = function(){
+    console.log('hello world2')
+    myapp()
+}
+
+myapp1()
+
+const myapp3 = function(n1,n2,callback){
+    console.log('hello world')
+    callback(n1,n2)
+}
+
+myapp3(5,2,(n1,n2)=>{
+    console.log(n1+n2)
+})
+
+
+
+function myFullName(fname,lname){
+    return (`My firstname is ${fname} and my last name is ${lname}`)
+}
+
+console.log(myFullName('Meet','Donga'))
+console.log(myFullName.prototype)
+
+myFullName.age = 10
+console.log(myFullName.prototype)
+
+
+function mySum2(num1,num2){
+    if(num1+num2 > 10){
+        return true
+    }
+    return false
+}
+
+mySum2(5,5)
+mySum2(4,4)
+
+// console.log(mySum2(4,5))
+// console.log(mySum2(10,20))
+
 
 
 

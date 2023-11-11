@@ -460,7 +460,7 @@ console.log(mySpliceArray)
 
 //insert
 mySpliceArray.splice(1,0,'insert item4','insert item5')
-console.log(mySpliceArray)
+console.log('new array',mySpliceArray)
 
 
 // using both insert and delete 
@@ -502,5 +502,93 @@ console.log(sliceArr)
 console.log(sliceArray)
 
 
+const indCity = ['Delhi','Chennai','Bengaluru','Ahmedabad']
+const usCity = ['Newyork','washington','california','Dallas']
 
+// spread operator
+const all_city = indCity.concat(usCity)
+console.log(all_city)
+const allCity = [...indCity,...usCity]
+console.log(allCity)
+
+
+// convert object,string, json to array
+
+console.log(Array.isArray('Hitesh'))
+console.log(Array.from('Hitesh'))  // convert string to array
+console.log(Array.from({name:'meet'}))
+
+let score1 = 100
+let score2 = 200
+let score3 = 300
+
+console.log(Array.of(score1,score2,score3))
+
+
+// flat
+
+const arrayInsideArray = [1,2,3,[4,5,6],7,8,[9,10,[11,12]]]
+const real_another_array = arrayInsideArray.flat(Infinity)
+console.log(real_another_array)
+
+
+
+nationName = 'India'
+console.log(Array.from(nationName))
+
+nationList = ['India','Australia','Bangladesh','Japan','Indonasia','philipines','singapur','England','Ireland']
+console.log(nationList.slice(0,1))
+console.log(nationList[0])
+console.log(nationList.length)
+console.log(nationList[5])
+console.log(nationList.pop())
+console.log(nationList)
+console.log(nationList.push('Ireland'))
+console.log(nationList)
+console.log(nationList.unshift('United States'))
+console.log(nationList)
+console.log(nationList.shift())
+const sliceArrayList = nationList.slice(3,7)
+console.log(sliceArrayList)
+const spliceArrayList = nationList.splice(1,2,'Shrilanka')
+console.log(spliceArrayList)
+console.log(nationList)
+
+for(nation of nationList){
+    if(nation.length > 5){
+        console.log(nation)
+    }
+}
+
+for(nation of nationList){
+    if(true){
+        console.log(nation.length)
+    }
+}
+
+
+for(nation of nationList){
+    if (typeof nation==='string'){
+        console.log(nation)
+    }
+}
+
+for(let i=0; i<nationList.length; i++){
+    console.log(nationList[i])
+}
+
+// for decrement
+console.log('for decrement')
+console.log(nationList.length-1)
+for(let i=nationList.length-1; i>=0; i--){
+      console.log(nationList[i])
+}
+
+console.log('hello world')
+for(let i=0; i<=10; i++){
+    console.log('hello world')
+}
+
+
+  
 

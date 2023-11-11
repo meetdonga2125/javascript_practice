@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* if p first-child hoga to color red hoga or agar p last child hoga to color blue hoga */
+        /* // wo aapke parent ke particular sthan ko target karega */
+        
+        .content-1 p:first-child{
+            color: red;
+        }
+        .content-1 p:last-child{
+            color: blue;
+        }
+        
+        .content-1 p:nth-child(3){
+            color: slateblue
+        }
+
+        .content-1 li:nth-child(even){
+            color: salmon;
+        }
+
+        .content-1 li:nth-child(odd){
+            color: rgba(0, 0, 248, 0.617);
+        }
+
+
+        /* .content-1 li:nth-of-type(1){
+            color: orange
+        }
+
+        .content-1 li:nth-of-type(2){
+            color:aquamarine
+        } */
+
+        /* .content-1 li:first-of-type{
+            color: orange
+        } */
+
+        
+
+        /* .content-1 li:last-of-type{
+            color: orange
+        } */
+    </style>
+</head>
+<body>
+    <div class="content-1">
+        <!-- <ul> -->
+            <p>I am first</p>
+            <p>I am first</p>
+            <p>I am first</p>
+            <p>I am first</p>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <p>I am last</p>
+        <!-- </ul> -->
+    </div>
+    <div class="content-2">
+        <ul>
+            <p>I am first</p>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <p>I am last</p>
+        </ul>
+    </div>
+</body>
+</html>

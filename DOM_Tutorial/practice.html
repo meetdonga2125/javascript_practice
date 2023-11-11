@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: whitesmoke;
+        }
+        .form1{
+            display: flex;
+            width: 800px;
+            height: 600px;
+            background-color: black;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .input1 label{
+            display: block;
+            color: white;
+        }
+
+        input{
+            display: block;
+            width: 200px;
+            height: 20px;
+        }
+
+        .btn{
+            padding: 1rem 2.3rem;
+            margin-top: 2rem;
+        }
+
+        .active{
+            background-color: black;
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+            <form action="" class="form1">
+                <div class="input1">
+                    <label for="email">Email: </label>
+                    <input type="email" id='email' placeholder="email">
+                </div>
+               <div class="input1">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="password">
+               </div>
+               <div class="sumbit1">
+                <button type="submit" class="btn"> Login </button>
+               </div>
+            </form>
+        </div>
+        <script>
+            const submitBtn = document.querySelector('.btn')
+            submitBtn.addEventListener('click',(e) => {
+
+                console.log(e)
+                e.preventDefault
+                submitBtn.classList.add('active')
+            })
+        </script>
+</body>
+</html>

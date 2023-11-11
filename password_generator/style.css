@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid cyan;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+}
+
+.check input:checked{
+    background-color: cyan;
+}
+
+.check input:checked::before{
+    content: '✔';
+    position: absolute;
+    color: black;
+    font-size: 1.05rem;
+    font-weight: 600;
+    left: 50%;
+    top: -3.5px;
+    transform: translateX(-50%) translateY(20%);
+}
+
+
+.slider{
+    appearance: none;
+    /* position: relative; */
+    width: 100%;
+    height: 0.7rem;
+    cursor: pointer;
+    background-color: 	#711971;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    background-image: linear-gradient((	#711971,	#711971));
+    background-repeat: none;
+}
+
+.slider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    z-index: 10;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: yellow;
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(255,229,61,0.50);
+    transition: all 100ms ease-in;
+}
+
+.slider:focus{
+    outline: 3px solid yellow;
+}
+
+.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid yellow;
+    background-color: darkviolet;
+    box-shadow: 0px 0px 25px 5px rgba(255,229,61,0.80);
+}
+
+

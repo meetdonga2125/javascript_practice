@@ -220,7 +220,205 @@ console.log(myObj1?.address?.housenumber);
 
 
 
+// singleton
+//Object.create
+
+
+
+// object literals
+
+const mySymbol = Symbol('key1')
+const valueOfFname = 'Meet'
+const keyAge = 'age'
+
+const JsUser = {
+    [mySymbol] : 'mykey1',
+    fname : valueOfFname,
+    [keyAge] : 18,
+    location: 'Jaipur',
+    email: 'hitesh@gmail.com',
+    isLoggedIn: false,
+    lastLoginDays: ['Monday','Saturday']
+}
+
+console.log(JsUser['fname'])
+console.log(JsUser.fname)
+console.log('JsUser',JsUser.age)
+console.log(typeof JsUser[mySymbol])
+
+
+// Object.freeze(JsUser)
+
+JsUser.city = 'Gondal'
+console.log(JsUser)
+
+
+JsUser.greeting = function(){
+    console.log('hello JS User')
+}
+
+JsUser.greetingTwo = function(){
+    console.log(`hello JS User, ${this.fname}`)
+}
+
+
+console.log(JsUser.greeting())
+console.log(JsUser.greetingTwo())
+
+
+// const instaUser = new Object()  // singlton object
+const instaUser = {}
+
+instaUser.id = '123abc'
+instaUser.name = 'Sammy'
+instaUser.isLoggedIn = false
+
+// console.log(instaUser)
+
+
+const regularUser = {
+    email: 'some@gmail.com',
+    fullname : {
+        userfullname : {
+            firstName : 'hitesh',
+            lastName : 'chaudhary'
+        }
+    },
+}
+
+// console.log(regularUser.fullname.userfullname.firstName)
+
+
+const obj12 = {
+    1: 'a',
+    2: 'b'
+}
+
+const obj23 = {
+    3: 'c',
+    4: 'd',
+}
+
+const mergeObj = {...obj12,...obj23}
+console.log(mergeObj)
+const mergeObj2 = Object.assign({},obj12,obj23)
+console.log(mergeObj2)
+
+
+const usersDetail = [
+    {
+        id:1,
+        email: 'h@gmail.com'
+    },
+    {
+        id: 2,
+        email: 'm@gmail.com'
+    },
+    {
+        id:3,
+        email: 'd@gmail.com'
+    }
+
+]
+
+for(item of usersDetail){
+    console.log('iteration of object: ',item.email)
+}
+console.log(usersDetail[0].id)
+console.log(Object.keys(instaUser))
+console.log(Object.values(instaUser))
+console.log(Object.entries(instaUser))
+
+
+console.log(instaUser.hasOwnProperty('islogged'))
+
+console.log(Object.toString(usersDetail))
+
+
+
+const course = {
+    coursName : 'js in hindi',
+    price : '999',
+    courseInstructor : 'hitesh'
+
+}
+
+const {coursName:cname,price,courseInstructor} = course
+console.log(cname)
+console.log(price)
+console.log(courseInstructor)
+
+
+// optional chaining 
+
+const myObj10 = {
+    firstName:'Meet',
+    address : {housenumber:'1234'}
+
+}
+
+console.log(myObj10?.firstName);
+console.log(myObj10?.address?.housenumber);
+
+const nations = {
+    name : 'India',
+    state : 26,
+    UT: 8,
+    Capital:'Delhi',
+}
+
+console.log(nations)
+
+for(let value of Object.values(nations)){
+    console.log(value)
+}
+
+console.log(nations.name)
+console.log(nations.state)
+console.log(nations['Capital'])
+console.log(nations['UT'])
+
+
+let {name,state,UT,Capital} = nations
+console.log(name)
+console.log(state)
+
+let nations2 = nations
+console.log(nations2)
+
+nations['name'] = 'Australia'
+console.log(nations)
+console.log(nations2)
+
+let nations3 = {...nations}
+console.log(nations3)
+
+nations['name'] = 'South Africa'
+console.log(nations)
+console.log(nations3)
+
+nations.name = 'Newzealand'
+console.log(nations)
 
 
 
 
+
+
+
+// Json 
+
+
+// {
+//     'name': 'hitesh',
+//     'courseName' : 'js in hindi',
+//     'price' : 'free'
+
+// }
+
+
+// [
+//     {},
+//     {},
+//     {},
+// ]

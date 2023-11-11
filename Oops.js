@@ -228,8 +228,6 @@ class Animal {
         this.age = age;
     }
 
- 
-
     eat(){
         return `${this.name} is eating`;
     }

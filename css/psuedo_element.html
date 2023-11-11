@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+            background-color: azure;
+        }
+        h1{
+            font-weight: 800px;
+            font-size: 50px;
+            color: rgb(255, 166, 0);
+            position: relative;
+            text-shadow: 1px 1px 20px white;
+            transition: all 0.5s;
+        }
+        h1:hover{
+            text-shadow: 1px 1px 40px rgb(109, 178, 205);
+        }
+        h1::before{
+            position: absolute;
+            content: "meet donga";
+            top: -10px;
+            font-size: 16px;
+            color: olive
+        }
+        h1::after{
+            content: "";
+            position: absolute;
+            color: white;
+            width: 215px;
+            border: 2px solid black;
+            bottom: 0;
+            right: 0px;
+        }
+        .btn{
+            padding: 15px 60px;
+            gap: 10px;
+            position: relative;
+            z-index: 2;
+           
+
+        }
+        .btn::before{
+            position: absolute;
+            top:0;
+            left:0;
+            bottom: 0;
+            right: 0;
+            content: "";
+            /* color: red; */
+            height: 100%;
+            transform: scaleX(0);
+            transform-origin: left;
+            background-color: rgb(255, 166, 0);
+            z-index: -1;
+            transition: all 0.8s;
+            /* opacity: 0; */
+        }
+
+        .btn:hover::before{
+            transform: scaleX(1);
+        }
+
+        .container h1::first-letter{
+            font-size: 90px;
+            color: #ae445a
+        }
+
+        .container p::first-line{
+            text-decoration: underline;
+        }
+
+        .container p::first-letter{
+            font-size: 60px;
+            color: #ae445a;
+        }
+
+        .container p::selection{
+            background-color: rgb(255, 166, 0);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ANDTECH Solutions PVT LTD.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, commodi. <br> 
+           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum, deserunt? <br>
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, debitis.</p>
+        <button class="btn">Login</button>
+    </div>
+   
+</body>
+</html>
